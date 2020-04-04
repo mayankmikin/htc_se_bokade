@@ -4,13 +4,13 @@
 </div>
 <div class="container">
   <div class="row">
-    <div class="search-hero">
+    <div class="form-control" >
       <input class="form-control" type="text" name="search" [(ngModel)]="searchText" autocomplete="off" placeholder="&#61442;  Start searching for a store by  name " (keyup)="onKey(searchText)">
     </div>
 
   </div>
 </div>
 
-  <div style="text-align:center; margin-top:25px;">
+  <div style="text-align:center; margin-top:10px;" class="container text-center">
 	<ng2-smart-table [settings]="settings" [source]="data"></ng2-smart-table>
 </div>

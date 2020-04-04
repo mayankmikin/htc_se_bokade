@@ -5,11 +5,12 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'button-view',
   template: `
- 
+  <div class="btn-group" role="group" aria-label="Basic example">
       <button type="button" class="btn btn-primary" (click)="register()">
       Register Shop <i class="fa fa-clipboard"></i></button>
       <button type="button" class="btn btn-info" (click)="check()">
       Check Info <i class="fa fa-info-circle"></i></button>
+      </div>
 
   `,
 })

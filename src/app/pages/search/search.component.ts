@@ -49,10 +49,10 @@ export class SearchComponent implements OnInit {
     //actions: [],
     columns: {
       organisasjonsnummer: {
-        title: 'organisasjonsnummer'
+        title: 'Organisation Number'
       },
       navn: {
-        title: 'navn'
+        title: 'Name'
       },
       // organisasjonsform: {
       //   title: 'organisasjonsform'
