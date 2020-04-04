@@ -16,7 +16,7 @@ import { GuidelinesComponent } from 'app/pages/guidelines/guidelines.component';
 export const AdminLayoutRoutes: Routes = [
     { path: 'search',           component: SearchComponent },
     { path: 'dashboard',      component: SearchComponent },
-    { path: 'user',           component: UserComponent },
+    //{ path: 'user',           component: UserComponent },
     // { path: 'table',          component: TableComponent },
     // { path: 'typography',     component: TypographyComponent },
     // { path: 'icons',          component: IconsComponent },
