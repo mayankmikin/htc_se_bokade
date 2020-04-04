@@ -1,1 +1,29 @@
-<p>qr works!</p>
+
+<div class="row">
+  <div class="col-md-12">
+     
+    <div class="card ">
+      <div class="card-header ">
+        <h5 class="card-title">Enter organisation number and press generate QR Code</h5>
+        <!-- <p class="card-category">24 Hours performance</p> -->
+      </div>
+      <div class="card-body ">
+
+        <div style="text-align:center">
+          <input type="text" placeholder="Enter name to generate QR Code" [(ngModel)]="qrcodename"><br>
+          <button (click)="generateQRCode()">Generate QR Code</button>
+          <ngx-qrcode *ngIf="display" id="qrCodeImage" [qrc-element-type]="elementType" [qrc-value] = "value">
+          </ngx-qrcode><br>
+          <a [href]="href" *ngIf="display" (click)="downloadImage()" download>Download Image</a>
+      </div>
+      
+      </div>
+      <div class="card-footer ">
+        <hr>
+        <div class="stats">
+          <i class="fa fa-history"></i> Updated 3 minutes ago
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
