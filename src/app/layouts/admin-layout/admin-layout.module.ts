@@ -23,6 +23,7 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { NgxQRCodeModule } from 'ngx-qrcode2';
 import { Ng2SmartTableModule } from 'ng2-smart-table';
 import { NgxSpinnerModule } from 'ngx-spinner';
+import { ButtonViewComponent } from 'app/button.component';
 
 @NgModule({
   imports: [
@@ -33,6 +34,7 @@ import { NgxSpinnerModule } from 'ngx-spinner';
     NgxQRCodeModule,
     Ng2SmartTableModule,
     NgxSpinnerModule,
+
     NgbModule
   ],
   declarations: [
@@ -47,8 +49,10 @@ import { NgxSpinnerModule } from 'ngx-spinner';
     PosComponent,
     SearchComponent,
     QrComponent,
+    ButtonViewComponent,
 
-  ]
+  ],
+  entryComponents: [ButtonViewComponent],
 })
 
 export class AdminLayoutModule {}
