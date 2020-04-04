@@ -11,9 +11,12 @@
 
         <div style="text-align:center">
           <input type="text" placeholder="Enter name to generate QR Code" [(ngModel)]="qrcodename"><br>
-          <button (click)="generateQRCode()">Generate QR Code</button>
+          <button 
+          type="button" class="btn btn-info"
+          (click)="generateQRCode()">Generate QR Code</button>
           <ngx-qrcode *ngIf="display" id="qrCodeImage" [qrc-element-type]="elementType" [qrc-value] = "value">
           </ngx-qrcode><br>
+
           <a [href]="href" *ngIf="display" (click)="downloadImage()" download>Download Image</a>
       </div>
       
@@ -21,7 +24,7 @@
       <div class="card-footer ">
         <hr>
         <div class="stats">
-          <i class="fa fa-history"></i> Updated 3 minutes ago
+           <button (click)="printPage()"><i class="fa fa-history"></i> Print</button>
         </div>
       </div>
     </div>

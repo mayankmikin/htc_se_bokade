@@ -31,4 +31,7 @@ export class QrComponent implements OnInit {
   downloadImage(){
     this.href = document.getElementsByTagName('img')[0].src;
   }
+  printPage() {
+    window.print();
+  }
 }
