@@ -20,6 +20,7 @@ import { AngularFireModule } from '@angular/fire';
 import { NgxSpinnerModule } from "ngx-spinner";
 import { Ng2SmartTableModule } from 'ng2-smart-table';
 import { NgxQRCodeModule } from 'ngx-qrcode2';
+import { GuidelinesComponent } from './pages/guidelines/guidelines.component';
 
 
 
@@ -27,6 +28,7 @@ import { NgxQRCodeModule } from 'ngx-qrcode2';
   declarations: [
     AppComponent,
     AdminLayoutComponent,
+  
     
    
   ],

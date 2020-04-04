@@ -17,7 +17,7 @@ import { UpperCasePipe } from '@angular/common';
 export class SearchComponent implements OnInit {
   successMessage:string;
   errorMessage:string;
-  title = 'Search Store / Shop';
+  title = 'Search Store / Shop / Restaurant';
   searchText;
   constructor(private spinner: NgxSpinnerService,
     private searchService: SearchService,
