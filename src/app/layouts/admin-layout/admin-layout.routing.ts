@@ -11,6 +11,7 @@ import { UpgradeComponent } from '../../pages/upgrade/upgrade.component';
 import { PosComponent } from 'app/pages/pos/pos.component';
 import { QrComponent } from 'app/pages/qr/qr.component';
 import { SearchComponent } from 'app/pages/search/search.component';
+import { GuidelinesComponent } from 'app/pages/guidelines/guidelines.component';
 
 export const AdminLayoutRoutes: Routes = [
     { path: 'search',           component: SearchComponent },
@@ -22,7 +23,7 @@ export const AdminLayoutRoutes: Routes = [
     { path: 'maps',           component: MapsComponent },
     { path: 'notifications',  component: NotificationsComponent },
     { path: 'pos',          component: PosComponent },
-   
+    { path: 'guidelines',           component: GuidelinesComponent },
     { path: 'qr',           component: QrComponent },
 
 
