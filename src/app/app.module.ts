@@ -12,12 +12,23 @@ import { AppComponent } from './app.component';
 import { AppRoutes } from './app.routing';
 
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+import { environment } from 'environments/environment';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { AngularFireModule } from '@angular/fire';
+import {ButtonViewComponent} from './button.component';
+import { NgxSpinnerModule } from "ngx-spinner";
+import { Ng2SmartTableModule } from 'ng2-smart-table';
+import { NgxQRCodeModule } from 'ngx-qrcode2';
+
 
 
 @NgModule({
   declarations: [
     AppComponent,
     AdminLayoutComponent,
+    ButtonViewComponent,
    
   ],
   imports: [
@@ -29,6 +40,14 @@ import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.compon
     NavbarModule,
     ToastrModule.forRoot(),
     FooterModule,
+    HttpClientModule,
+    FormsModule,
+    BrowserAnimationsModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFirestoreModule,
+    NgxQRCodeModule,
+    Ng2SmartTableModule,
+    NgxSpinnerModule,
     FixedPluginModule
   ],
   providers: [],

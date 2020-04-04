@@ -1,1 +1,16 @@
-<p>search works!</p>
+
+<div class="container text-center">
+  <h1>{{title}}</h1>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="search-hero">
+      <input class="form-control" type="text" name="search" [(ngModel)]="searchText" autocomplete="off" placeholder="&#61442;  Start searching for a store by  name " (keyup)="onKey(searchText)">
+    </div>
+
+  </div>
+</div>
+
+  <div style="text-align:center; margin-top:25px;">
+	<ng2-smart-table [settings]="settings" [source]="data"></ng2-smart-table>
+</div>

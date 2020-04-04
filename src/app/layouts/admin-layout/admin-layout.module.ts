@@ -18,12 +18,21 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { PosComponent } from 'app/pages/pos/pos.component';
 import { QrComponent } from 'app/pages/qr/qr.component';
 import { SearchComponent } from 'app/pages/search/search.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { NgxQRCodeModule } from 'ngx-qrcode2';
+import { Ng2SmartTableModule } from 'ng2-smart-table';
+import { NgxSpinnerModule } from 'ngx-spinner';
 
 @NgModule({
   imports: [
     CommonModule,
     RouterModule.forChild(AdminLayoutRoutes),
     FormsModule,
+    AngularFirestoreModule,
+    NgxQRCodeModule,
+    Ng2SmartTableModule,
+    NgxSpinnerModule,
     NgbModule
   ],
   declarations: [
@@ -38,6 +47,7 @@ import { SearchComponent } from 'app/pages/search/search.component';
     PosComponent,
     SearchComponent,
     QrComponent,
+
   ]
 })
 
