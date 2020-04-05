@@ -2,10 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { NgxSpinnerService } from 'ngx-spinner';
 import { SearchService } from 'app/service/search.service';
 import { Messages } from 'app/models/urls';
-import { ButtonViewComponent } from 'app/button.component';
+
 import {Observable} from 'rxjs';
 import {debounceTime, distinctUntilChanged, map,switchMap, catchError} from 'rxjs/operators';
 import { UpperCasePipe } from '@angular/common';
+import { ButtonViewComponent } from 'app/layouts/admin-layout/button.component';
 
 
 @Component({

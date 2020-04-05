@@ -23,11 +23,11 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { NgxQRCodeModule } from 'ngx-qrcode2';
 import { Ng2SmartTableModule } from 'ng2-smart-table';
 import { NgxSpinnerModule } from 'ngx-spinner';
-import { ButtonViewComponent } from 'app/button.component';
 import { GuidelinesComponent } from 'app/pages/guidelines/guidelines.component';
 import { RegistershopComponent } from 'app/pages/registershop/registershop.component';
 import { CheckInfoComponent } from 'app/pages/check-info/check-info.component';
 import { NgxMaterialTimepickerModule } from 'ngx-material-timepicker';
+import { ButtonViewComponent } from './button.component';
 
 @NgModule({
   imports: [

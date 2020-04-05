@@ -12,6 +12,8 @@ import { PosComponent } from 'app/pages/pos/pos.component';
 import { QrComponent } from 'app/pages/qr/qr.component';
 import { SearchComponent } from 'app/pages/search/search.component';
 import { GuidelinesComponent } from 'app/pages/guidelines/guidelines.component';
+import { CheckInfoComponent } from 'app/pages/check-info/check-info.component';
+import { RegistershopComponent } from 'app/pages/registershop/registershop.component';
 
 export const AdminLayoutRoutes: Routes = [
     { path: 'search',           component: SearchComponent },
@@ -25,7 +27,8 @@ export const AdminLayoutRoutes: Routes = [
     { path: 'pos',          component: PosComponent },
     { path: 'guidelines',           component: GuidelinesComponent },
     { path: 'qr',           component: QrComponent },
-
+    { path: 'check/:id', component: CheckInfoComponent },
+    { path: 'register/:id', component: RegistershopComponent},
 
    // { path: 'upgrade',        component: UpgradeComponent }
 ];
