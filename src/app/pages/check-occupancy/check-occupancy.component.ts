@@ -34,6 +34,7 @@ export class CheckOccupancyComponent implements OnInit , AfterViewInit {
             if(this.PosType)
             {
               this.checkShopIsRegistered(this.PosType);
+              console.log(this.shop)
              // this.successMessage="Saved Successfully";
             }
 

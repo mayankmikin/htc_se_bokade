@@ -18,7 +18,7 @@ import { ButtonViewComponent } from 'app/layouts/admin-layout/button.component';
 export class SearchComponent implements OnInit {
   successMessage:string;
   errorMessage:string;
-  title = 'Search Store / Shop / Restaurant';
+  title = 'Search Store / Shop / Restaurant / Bars / Services';
   searchText;
   constructor(private spinner: NgxSpinnerService,
     private searchService: SearchService,
