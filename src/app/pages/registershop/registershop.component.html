@@ -1,0 +1,56 @@
+<link href="//netdna.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" />
+<div class="jumbotron">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+                <h3>Name: {{shop.navn}}</h3>
+                <div class="card" style="width:400px">
+                    <div class="card-body">
+                      <h4 class="card-title">Kommune : {{shop.forretningsadresse.kommune}}</h4>
+                      <h4 class="card-title">kommunenummer : {{shop.forretningsadresse.kommunenummer}}</h4>
+                      <h4 class="card-title">postnummer : {{shop.forretningsadresse.postnummer}}</h4>
+                      <h4 class="card-title">landkode : {{shop.forretningsadresse.landkode}}</h4>
+                      <h4 class="card-title">land : {{shop.forretningsadresse.land}}</h4>
+                      <h4 class="card-title">kode : {{shop.organisasjonsform.kode}}</h4>
+                      <h4 class="card-title">beskrivelse : {{shop.organisasjonsform.beskrivelse}}</h4>
+                      <h4 class="card-title">registreringsdatoEnhetsregisteret : {{shop.registreringsdatoEnhetsregisteret}}</h4>
+                     </div>
+                     </div>
+
+                <form name="form" (ngSubmit)="f.form.valid && onSubmit(openpicker,closepicker)" #f="ngForm" novalidate>
+
+                      
+                    <div class="form-group">
+                        <label for="organisasjonsnummerModel">Enter organisasjonsnummer</label>
+                        <input type="text" class="form-control" name="organisasjonsnummer" [(ngModel)]="organisasjonsnummer" #organisasjonsnummerModel="ngModel" [ngClass]="{ 'is-invalid': f.submitted && organisasjonsnummerModel.invalid }" required />
+                        <div *ngIf="f.submitted && organisasjonsnummerModel.invalid" class="invalid-feedback">
+                            <div *ngIf="organisasjonsnummerModel.errors.required">organisasjonsnummer is required</div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="organisasjonsnummerModel">Enter opening time</label>
+                        <hr/>
+                        <input [ngxTimepicker]="openpicker">
+                        <ngx-material-timepicker #openpicker></ngx-material-timepicker>
+                        
+
+                    </div>
+                <div class="form-group">
+                        <label for="organisasjonsnummerModel">Enter closing time</label>
+                    <hr/>
+                     
+                        <input [ngxTimepicker]="closepicker" >
+                        <ngx-material-timepicker #closepicker></ngx-material-timepicker>
+                    
+                </div>       
+                               
+                    <div class="form-group">
+                        <button class="btn btn-primary">Register</button>
+                    </div>
+                  </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    

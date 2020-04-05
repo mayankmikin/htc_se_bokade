@@ -1,0 +1,51 @@
+<!-- <p>check-info works!</p>
+<div class="card">
+    
+    <div class="container">
+      <h4><label>Shop Name from bregg: </label><b>{{shop.navn}}</b></h4>
+      <p>Architect & Engineer</p>
+    </div>
+  </div>    
+
+  <div class="card">
+    
+    <div class="container">
+      <h4><label>Shop Name from Firebase : </label><b>{{shop.navn}}</b></h4>
+      <p>Architect & Engineer</p>
+    </div>
+  </div>    
+  <button type="button" class="btn" (click)="save()">Save </button>
+ -->
+
+
+ 
+<div class="container">
+  <h2>Name: {{shop.navn}}</h2>
+  <div class="card" style="width:400px">
+    <!-- <img class="card-img-top" src="img_avatar1.png" alt="Card image" style="width:100%"> -->
+    <div class="card-body">
+      <h4 class="card-title">Kommune : {{shop.forretningsadresse.kommune}}</h4>
+      <h4 class="card-title">kommunenummer : {{shop.forretningsadresse.kommunenummer}}</h4>
+      <h4 class="card-title">postnummer : {{shop.forretningsadresse.postnummer}}</h4>
+      <h4 class="card-title">landkode : {{shop.forretningsadresse.landkode}}</h4>
+      <h4 class="card-title">land : {{shop.forretningsadresse.land}}</h4>
+      <h4 class="card-title">kode : {{shop.organisasjonsform.kode}}</h4>
+      <h4 class="card-title">beskrivelse : {{shop.organisasjonsform.beskrivelse}}</h4>
+      <h4 class="card-title">registreringsdatoEnhetsregisteret : {{shop.registreringsdatoEnhetsregisteret}}</h4>
+      <div class="alert alert-success" *ngIf="!showerror">
+          <strong>{{shop.navn}} </strong> {{successmessage}}
+        </div>
+        <div class="alert alert-danger" *ngIf="showerror">
+            <strong>{{shop.navn}} </strong> {{errormessage}}
+          </div>
+      <!-- <p class="card-text">Please Enter Organisation Number To continue</p>
+      <input type="text" class="form-control" placeholder="organisasjonsnummer" 
+      required
+      [(ngModel)]="model.name"
+      id="organisasjonsnummer">
+      <a href="#" class="btn btn-primary">See Profile</a> -->
+    </div>
+  </div>
+  <br>
+</div>
+
