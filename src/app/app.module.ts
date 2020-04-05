@@ -24,11 +24,11 @@ import {NgxMaterialTimepickerModule} from 'ngx-material-timepicker';
 
 
 
-
 @NgModule({
   declarations: [
     AppComponent,
-    AdminLayoutComponent, 
+    AdminLayoutComponent,
+    
   ],
   imports: [
     BrowserAnimationsModule,

@@ -28,6 +28,7 @@ import { RegistershopComponent } from 'app/pages/registershop/registershop.compo
 import { CheckInfoComponent } from 'app/pages/check-info/check-info.component';
 import { NgxMaterialTimepickerModule } from 'ngx-material-timepicker';
 import { ButtonViewComponent } from './button.component';
+import { CheckOccupancyComponent } from 'app/pages/check-occupancy/check-occupancy.component';
 
 @NgModule({
   imports: [
@@ -56,6 +57,7 @@ import { ButtonViewComponent } from './button.component';
     GuidelinesComponent,
     CheckInfoComponent,
     RegistershopComponent,
+    CheckOccupancyComponent,
     ButtonViewComponent,
 
   ],
