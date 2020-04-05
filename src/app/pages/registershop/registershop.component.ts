@@ -1,7 +1,7 @@
 import { Component, OnInit , Inject } from '@angular/core';
 import { SearchService } from 'app/service/search.service';
 import { NgxSpinnerService } from 'ngx-spinner';
-import { ActivatedRoute, ParamMap } from '@angular/router';
+import { ActivatedRoute, ParamMap, Router } from '@angular/router';
 import { Enheter } from 'app/models/result';
 import { FirestoreService } from 'app/services/firestore.service';
 import { Store, Calendar, Slot, TMonth, Time, Close } from 'app/models/store';
@@ -19,13 +19,14 @@ export class RegistershopComponent implements OnInit {
     private searchService: SearchService,
     private route: ActivatedRoute,
     private firestoreService : FirestoreService,
-
+    private router:Router,
     ) { }
     organisasjonsnummer:string;
     shop:Store=new Store();
     fshop:Store=new Store();
     id:string
     durationInSeconds = 5;
+    maxcount: number=5;
     onSubmit(openpicker,closepicker) {
       console.log(openpicker)
       console.log(closepicker)
@@ -117,8 +118,10 @@ export class RegistershopComponent implements OnInit {
     time.close=Object.assign({}, time.close);
     time.open=Object.assign({}, time.open);
     this.shop.time=Object.assign({}, time);
+    this.shop.maxpeopleallowed=this.maxcount;
     this.firestoreService.saveStore(this.shop);
     alert(this.organisasjonsnummer+'registered successfully ')
+    this.router.navigate(['/check', this.organisasjonsnummer]);
   }
 }
 

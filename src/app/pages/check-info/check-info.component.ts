@@ -21,8 +21,8 @@ export class CheckInfoComponent implements OnInit {
 
     shop:Store;
     id:string
-    successmessage:string=" is Registred With US!"
-    errormessage:string=" is not Registred With US!"
+    successmessage:string="  is Registered !"
+    errormessage:string="  is not Registered !"
     showerror=false;
   ngOnInit() 
   { 

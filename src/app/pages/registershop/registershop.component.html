@@ -4,16 +4,16 @@
         <div class="row">
             <div class="col-md-8 offset-md-2">
                 <h3>Name: {{shop.navn}}</h3>
-                <div class="card" style="width:400px">
+                <div class="card" >
                     <div class="card-body">
-                      <h4 class="card-title">Kommune : {{shop.forretningsadresse.kommune}}</h4>
-                      <h4 class="card-title">kommunenummer : {{shop.forretningsadresse.kommunenummer}}</h4>
-                      <h4 class="card-title">postnummer : {{shop.forretningsadresse.postnummer}}</h4>
-                      <h4 class="card-title">landkode : {{shop.forretningsadresse.landkode}}</h4>
+                      <h4 class="card-title">Municipality : {{shop.forretningsadresse.kommune}}</h4>
+                      <h4 class="card-title">Municipal Number : {{shop.forretningsadresse.kommunenummer}}</h4>
+                      <h4 class="card-title">zip code : {{shop.forretningsadresse.postnummer}}</h4>
+                      <h4 class="card-title">country code : {{shop.forretningsadresse.landkode}}</h4>
                       <h4 class="card-title">land : {{shop.forretningsadresse.land}}</h4>
-                      <h4 class="card-title">kode : {{shop.organisasjonsform.kode}}</h4>
-                      <h4 class="card-title">beskrivelse : {{shop.organisasjonsform.beskrivelse}}</h4>
-                      <h4 class="card-title">registreringsdatoEnhetsregisteret : {{shop.registreringsdatoEnhetsregisteret}}</h4>
+                      <h4 class="card-title">code : {{shop.organisasjonsform.kode}}</h4>
+                      <h4 class="card-title">description : {{shop.organisasjonsform.beskrivelse}}</h4>
+                      <h4 class="card-title">registration date CCR : {{shop.registreringsdatoEnhetsregisteret}}</h4>
                      </div>
                      </div>
 
@@ -27,6 +27,16 @@
                             <div *ngIf="organisasjonsnummerModel.errors.required">organisasjonsnummer is required</div>
                         </div>
                     </div>
+
+                    <div class="form-group">
+                            <label for="maxcount">Maximum Persons allowed</label>
+                        <hr/>
+                         
+                        <input type="text" class="form-control" id="maxcount"
+                            required
+                            [(ngModel)]="maxcount" name="maxcount">
+                        
+                    </div>   
 
                     <div class="form-group">
                         <label for="organisasjonsnummerModel">Enter opening time</label>
@@ -44,7 +54,10 @@
                         <ngx-material-timepicker #closepicker></ngx-material-timepicker>
                     
                 </div>       
-                               
+
+
+
+
                     <div class="form-group">
                         <button class="btn btn-primary">Register</button>
                     </div>
