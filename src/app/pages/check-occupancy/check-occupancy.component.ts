@@ -27,6 +27,8 @@ export class CheckOccupancyComponent implements OnInit , AfterViewInit {
    this.open(this.template);
   }
 
+  displayInfo=false;
+
   open(content) {
     this.modalService.open(content, {ariaLabelledBy: 'modal-basic-title'}).result.then((result) => {
             // save button pressed
@@ -34,7 +36,7 @@ export class CheckOccupancyComponent implements OnInit , AfterViewInit {
             if(this.PosType)
             {
               this.checkShopIsRegistered(this.PosType);
-              console.log(this.shop)
+              
              // this.successMessage="Saved Successfully";
             }
 
@@ -62,7 +64,12 @@ export class CheckOccupancyComponent implements OnInit , AfterViewInit {
       {
         console.log('found in firestore')
         var s=data.data() as Store
-        console.log()
+        this.shop=s;
+        console.log(this.shop)
+        if(this.shop.organisasjonsnummer)
+        {
+          this.displayInfo=true
+        }
         if(this.shop.organisasjonsnummer!=s.organisasjonsnummer)
         {
           this.showerror=true
