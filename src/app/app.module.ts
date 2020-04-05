@@ -20,17 +20,15 @@ import { AngularFireModule } from '@angular/fire';
 import { NgxSpinnerModule } from "ngx-spinner";
 import { Ng2SmartTableModule } from 'ng2-smart-table';
 import { NgxQRCodeModule } from 'ngx-qrcode2';
-import { GuidelinesComponent } from './pages/guidelines/guidelines.component';
+import {NgxMaterialTimepickerModule} from 'ngx-material-timepicker';
+
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    AdminLayoutComponent,
-  
-    
-   
+    AdminLayoutComponent, 
   ],
   imports: [
     BrowserAnimationsModule,
@@ -49,6 +47,7 @@ import { GuidelinesComponent } from './pages/guidelines/guidelines.component';
     NgxQRCodeModule,
     Ng2SmartTableModule,
     NgxSpinnerModule,
+    NgxMaterialTimepickerModule,
     FixedPluginModule
   ],
   providers: [],
