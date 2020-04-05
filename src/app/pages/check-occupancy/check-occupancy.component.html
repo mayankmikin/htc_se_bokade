@@ -1,7 +1,7 @@
 <p>check-occupancy works!</p>
 <ng-template #content let-modal>
         <div class="modal-header">
-          <h4 class="modal-title" id="modal-basic-title">Create New Point Of Sale</h4>
+          <h4 class="modal-title" id="modal-basic-title">Provide Organization Number</h4>
           <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
             <span aria-hidden="true">&times;</span>
           </button>
@@ -9,14 +9,14 @@
         <div class="modal-body">
           <form>
             <div class="form-group">
-              <label for="type">Type</label>
+              <label for="type">Enter Organization Number [eg. 979559518] then click Save</label>
               <div class="input-group">
                 <!-- <input id="dateOfBirth" class="form-control" placeholder="yyyy-mm-dd" name="dp" ngbDatepicker #dp="ngbDatepicker">
                 <div class="input-group-append">
                   <button class="btn btn-outline-secondary calendar" (click)="dp.toggle()" type="button"></button>
                 </div> -->
                 <input id="type" type="text" class="form-control" 
-                placeholder="Enter POS"
+                placeholder="Organization Number"
                 [(ngModel)]="PosType"
                 name="type"/>
                 

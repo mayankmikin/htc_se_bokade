@@ -1,5 +1,7 @@
-import { Component, OnInit, AfterViewInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit, TemplateRef, ViewChild } from '@angular/core';
 import { NgbModal,ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
+import { FirestoreService } from 'app/services/firestore.service';
+import { Store } from 'app/models/store';
 @Component({
   selector: 'app-check-occupancy',
   templateUrl: './check-occupancy.component.html',
@@ -7,14 +9,22 @@ import { NgbModal,ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
 })
 export class CheckOccupancyComponent implements OnInit , AfterViewInit {
   closeResult: string;
-  PosType:string="";
+  PosType:number;
   successMessage:string;
-  constructor(private modalService: NgbModal) { }
+  shop:Store;
+  errormessage:string="  is not Registered !"
+  showerror=false;
+
+  @ViewChild('content',{static: false})
+  private template: TemplateRef<any>;
+  constructor(private modalService: NgbModal,
+    private firestoreService : FirestoreService,
+    ) { }
 
   ngOnInit() {
   }
   ngAfterViewInit() {
-   
+   this.open(this.template);
   }
 
   open(content) {
@@ -23,10 +33,11 @@ export class CheckOccupancyComponent implements OnInit , AfterViewInit {
             console.log(this.PosType);
             if(this.PosType)
             {
-              this.successMessage="Saved Successfully";
+              this.checkShopIsRegistered(this.PosType);
+             // this.successMessage="Saved Successfully";
             }
 
-            this.PosType="";
+           // this.PosType="";
       this.closeResult = `Closed with: ${result}`;
     }, (reason) => {
       this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
@@ -41,6 +52,25 @@ export class CheckOccupancyComponent implements OnInit , AfterViewInit {
     } else {
       return  `with: ${reason}`;
     }
+  }
+
+  checkShopIsRegistered(id:number)
+  {
+    this.firestoreService.getById(id.toString()).then(data => {
+      if(data.exists)
+      {
+        console.log('found in firestore')
+        var s=data.data() as Store
+        console.log()
+        if(this.shop.organisasjonsnummer!=s.organisasjonsnummer)
+        {
+          this.showerror=true
+        }
+      }
+      else{
+        this.showerror=true
+      }
+    });
   }
 
 }
